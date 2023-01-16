@@ -8,7 +8,6 @@ import java.awt.event.MouseMotionAdapter;
 import java.util.List;
 
 public class DragPanel extends JPanel {
-    //khob tamoom shod che konam
     private ImageIcon image = new ImageIcon("src/resources/cross_icon.png");
     private JLabel label;
     private final int WIDTH = image.getIconWidth();

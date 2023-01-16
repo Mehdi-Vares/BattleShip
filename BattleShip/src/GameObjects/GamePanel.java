@@ -8,9 +8,9 @@ import java.awt.font.TextLayout;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
+import java.util.HashSet;
 
 public class GamePanel extends JPanel {
-    private JPanel panel;
     private Ship[] ships;
     private static JLabel mainLabel;
     private JButton confirmButton, clearButton;
@@ -34,34 +34,34 @@ public class GamePanel extends JPanel {
         oppGameBoard = new GameBoard(point2);
         this.ships = new Ship[5];
 
-        // Carrier
-        this.ships[0] = new Ship(5, new Point(myOuterPanel.getBounds().x + 25,
-                myOuterPanel.getBounds().y + 25),
-                false,
-                new Color(0, 255, 255));
-
-        // Battleship
-        this.ships[1] = new Ship(4, new Point(myOuterPanel.getBounds().x + 25,
-                myOuterPanel.getBounds().y + 50), false,
-                new Color(164, 221, 0));
-
-        // Cruiser
-        this.ships[2] = new Ship(3, new Point(myOuterPanel.getBounds().x + 25,
-                myOuterPanel.getBounds().y + 75),
-                false,
-                new Color(219, 77, 226));
-
-        // SubMarine
-        this.ships[3] = new Ship(3, new Point(myOuterPanel.getBounds().x + 25,
-                myOuterPanel.getBounds().y + 100),
-                false,
-                new Color(255, 100, 0));
-
-        // Destroyer
-        this.ships[4] = new Ship(2, new Point(myOuterPanel.getBounds().x + 25,
-                myOuterPanel.getBounds().y + 125),
-                false,
-                new Color(255, 50, 50));
+//        // Carrier
+//        this.ships[0] = new Ship(5, new Point(myOuterPanel.getBounds().x + 25,
+//                myOuterPanel.getBounds().y + 25),
+//                false,
+//                new Color(0, 255, 255));
+//
+//        // Battleship
+//        this.ships[1] = new Ship(4, new Point(myOuterPanel.getBounds().x + 25,
+//                myOuterPanel.getBounds().y + 50), false,
+//                new Color(164, 221, 0));
+//
+//        // Cruiser
+//        this.ships[2] = new Ship(3, new Point(myOuterPanel.getBounds().x + 25,
+//                myOuterPanel.getBounds().y + 75),
+//                false,
+//                new Color(219, 77, 226));
+//
+//        // SubMarine
+//        this.ships[3] = new Ship(3, new Point(myOuterPanel.getBounds().x + 25,
+//                myOuterPanel.getBounds().y + 100),
+//                false,
+//                new Color(255, 100, 0));
+//
+//        // Destroyer
+//        this.ships[4] = new Ship(2, new Point(myOuterPanel.getBounds().x + 25,
+//                myOuterPanel.getBounds().y + 125),
+//                false,
+//                new Color(255, 50, 50));
 
 
         add(myGameBoard);
@@ -129,8 +129,6 @@ public class GamePanel extends JPanel {
                     oppGameBoard.getY() - 5
             );
         }
-
-
     }
 
     public void setButtons(Graphics2D g) {
