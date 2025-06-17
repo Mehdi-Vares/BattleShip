@@ -5,11 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class GameBoard extends JPanel implements ActionListener, MouseListener {
-    private ArrayList<String> choices = new ArrayList<String>(Ship.shipNames.keySet());
-    private Button[][] buttons = new Button[10][10];
+    private final ArrayList<String> choices = new ArrayList<String>(Ship.shipNames.keySet());
+    private final Button[][] buttons = new Button[10][10];
     private int selectedShips = 0;
     private boolean isOpp;
     protected static ImageIcon icon = new ImageIcon("src/resources/cross_Icon.png");
