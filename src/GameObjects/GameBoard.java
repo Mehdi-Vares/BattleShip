@@ -49,7 +49,6 @@ public class GameBoard extends JPanel implements ActionListener, MouseListener {
         placeShips(button, true);
         placeShips(button, false);
 
-
     }
 
     public void setButtons(Button button, boolean b){
